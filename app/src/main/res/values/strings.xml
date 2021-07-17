@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">CeylonLinuxAssignment</string>
+
+    <string name="http_failed_message">     It looks like something has gone wrong. Please try again. </string>
+
+</resources>
