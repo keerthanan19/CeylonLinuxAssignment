@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="name" >
+        <item>TRAVEL</item>
+        <item>FUEL</item>
+        <item>HIGHWAY CHARGE</item>
+        <item>PARKING</item>
+        <item>VEHICLE SERVICE</item>
+        <item>NIGHT OUT</item>
+        <item>LUNCH</item>
+    </string-array>
+
+</resources>

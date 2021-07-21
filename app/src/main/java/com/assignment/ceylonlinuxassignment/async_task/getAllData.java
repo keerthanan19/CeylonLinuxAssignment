@@ -7,6 +7,7 @@ import android.util.JsonReader;
 import android.util.Log;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.assignment.ceylonlinuxassignment.Network.JsonReaderGet;
 import com.assignment.ceylonlinuxassignment.Utils.Utility;
@@ -43,6 +44,12 @@ public class getAllData extends android.os.AsyncTask<String[], String[], String[
 
     @Override
     protected void onPostExecute(String[] response) {
+
+        try{
+            Toast.makeText(mContext,response.toString(),Toast.LENGTH_LONG).show();
+        }catch (Exception e){
+
+        }
 
         super.onPostExecute(response);
     }

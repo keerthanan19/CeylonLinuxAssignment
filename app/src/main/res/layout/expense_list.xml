@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="50dp">
 
     <LinearLayout
         android:id="@+id/tittle"
@@ -14,36 +14,36 @@
 
         <TextView
             android:id="@+id/date"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="0dp"
             android:textSize="20sp"
-            android:text="DATE"
+            android:text=""
             android:layout_weight="1"/>
 
         <TextView
             android:id="@+id/expense_type"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
             android:textSize="20sp"
-            android:text="EXPENSES"
+            android:text=""
             android:layout_weight="1"/>
 
         <TextView
             android:id="@+id/amount"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="20sp"
-            android:text="AMOUNT"
+            android:text=""
             android:layout_weight="1"/>
 
         <ImageView
             android:id="@+id/image"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:textSize="20sp"
-            android:text="IMAGE"
+            android:text=""
             android:layout_weight="1"/>
 
     </LinearLayout>

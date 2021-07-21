@@ -42,13 +42,15 @@ public class ExpensesListAdapter extends RecyclerView.Adapter<ExpensesListAdapte
     @SuppressLint("CheckResult")
     @Override
     public void onBindViewHolder(ExpensesListAdapter.ViewHolder holder, int position) {
-        holder.type.setText(expensesArrayList.get(position).getExpenses_type());
-        holder.expense_type.setText(expensesArrayList.get(position).getExpenses_type());
-        holder.amount.setText(expensesArrayList.get(position).getExpenses_type());
-
+        if(expensesArrayList.size() != 0) {
+          /*  holder.amount.setText(expensesArrayList.get(position).getExpenses_amount());
+            holder.type.setText(expensesArrayList.get(position).getExpenses_date());
+            holder.expense_type.setText(expensesArrayList.get(position).getExpenses_type());
+*/
        /* Glide.with(mContext)
                 .load(expensesArrayList.get(position).getExpenses_image())
                 .into(holder.image);*/
+        }
     }
 
     @Override

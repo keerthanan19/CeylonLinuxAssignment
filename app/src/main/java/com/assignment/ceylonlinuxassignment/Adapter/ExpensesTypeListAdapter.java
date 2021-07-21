@@ -76,7 +76,9 @@ public class ExpensesTypeListAdapter extends RecyclerView.Adapter<ExpensesTypeLi
             }
         });
 
-        expense.setExpenses_image(AddExpensesActivity.selectedImage.toString());
+        if(AddExpensesActivity.selectedImage != null) {
+            expense.setExpenses_image(AddExpensesActivity.selectedImage.toString());
+        }
         expense.setExpenses_date(AddExpensesActivity.date);
         expense.setExpenses_add_date(AddExpensesActivity.CurrentDate);
         expense.setExpenses_add_time(AddExpensesActivity.CurrentTime);

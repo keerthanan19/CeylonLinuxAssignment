@@ -78,10 +78,11 @@ public class DBUtils {
 
                     dateCollection.add(expenses);
                 } while (c.moveToNext());
+                Log.e(TAG, "getAllExpensesData " + dateCollection.size());
             }
             return dateCollection;
         } catch (Exception e) {
-            Log.e(TAG, "getAllOrderSummaryData " + e.toString());
+            Log.e(TAG, "getAllExpensesData " + e.toString());
         }
         return dateCollection;
     }

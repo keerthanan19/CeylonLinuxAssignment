@@ -26,7 +26,7 @@ import java.util.Locale;
 
 public class AddExpensesActivity extends AppCompatActivity {
     ImageView view ;
-    public  static  Uri selectedImage;
+    public  static  Uri selectedImage ;
     public  static String CurrentDate;
     public  static String CurrentTime;
     public  static String date;
@@ -56,17 +56,16 @@ public class AddExpensesActivity extends AppCompatActivity {
         CurrentDate = currentDate.toString();
         CurrentTime = currentTime.toString();
 
-        ArrayList<Expenses> expensesArrayList = new ArrayList<>();
-        Expenses expenses = new Expenses();
-        expenses.setExpenses_type("TRAVEL");
-        expenses.setExpenses_type("FUEL");
-        expenses.setExpenses_type("HIGHWAY CHARGE");
-        expenses.setExpenses_type("PARKING");
-        expenses.setExpenses_type("VEHICLE SERVICE");
-        expenses.setExpenses_type("NIGHT OUT");
-        expenses.setExpenses_type("LUNCH");
 
-        expensesArrayList.add(expenses);
+        String[] name = getResources().getStringArray(R.array.name);
+
+        ArrayList<Expenses> expensesArrayList = new ArrayList<>();
+
+        for (int i = 0; i < name.length; i++) {
+            Expenses expenses = new Expenses();
+            expenses.setExpenses_type( name[i]);
+            expensesArrayList.add(expenses);
+        }
 
         RecyclerView expenses_type_list = findViewById(R.id.expense_type_list);
         LinearLayoutManager layoutManagerExpenses_type_list = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
@@ -116,7 +115,7 @@ public class AddExpensesActivity extends AppCompatActivity {
              for(int i = 0 ; i < addList.size(); i++){
                  DBUtils.insert_expenses_to_expense_table(addList.get(i),AddExpensesActivity.this);
 
-                 if(i == addList.size()){
+                 if(i == addList.size() - 1){
                      startActivity(new Intent(AddExpensesActivity.this,MainActivity.class));
                  }
              }

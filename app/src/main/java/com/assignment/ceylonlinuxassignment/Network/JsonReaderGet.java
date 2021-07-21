@@ -32,7 +32,7 @@ public class JsonReaderGet {
                     if (jsonObj.get("success").toString().equals("true")) {
                         responseArray[0] = "true";
                         responseArray[1] = response;
-                        Log.d(TAG, "getAllOrder: " + jsonObj.getString("data"));
+                        Log.d(TAG, "getAPI: " + jsonObj.getString("data"));
                     } else {
                         responseArray[0] = "false";
                         if (jsonObj.has("code")) {
@@ -44,25 +44,25 @@ public class JsonReaderGet {
                         } else {
                             responseArray[1] = jsonObj.getString("message");
                         }
-                        Log.d(TAG, "getAllOrder: " + jsonObj.getString("message"));
+                        Log.d(TAG, "getAPI: " + jsonObj.getString("message"));
                     }
                 }else {
                     responseArray[0] = "false";
                     responseArray[1] = "";
-                    Log.d(TAG, "getAllOrder: empty" + response);
+                    Log.d(TAG, "getAPI: empty" + response);
                 }
             } catch (IOException e) {
                 responseArray[0] = "false";
                 responseArray[1] = mContext.getResources().getString(R.string.http_failed_message);
-                Log.d(TAG, "getAllOrder: IOException : " + e.getMessage());
+                Log.d(TAG, "getAPI: IOException : " + e.getMessage());
             } catch (JSONException e) {
                 responseArray[0] = "false";
                 responseArray[1] = mContext.getResources().getString(R.string.http_failed_message);
-                Log.d(TAG, "getAllOrder: JSONException : " + e.getMessage());
+                Log.d(TAG, "getAPI: JSONException : " + e.getMessage());
             } catch (Exception e) {
                 responseArray[0] = "false";
                 responseArray[1] = mContext.getResources().getString(R.string.http_failed_message);
-                Log.d(TAG, "getAllOrder: Exception : " + e.getMessage());
+                Log.d(TAG, "getAPI: Exception : " + e.getMessage());
             }
         } else {
             responseArray[0] = "false";
